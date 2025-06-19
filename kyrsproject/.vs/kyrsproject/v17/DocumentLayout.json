@@ -1,0 +1,318 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Professional\\Downloads\\Worka\\kyrsproject\\kyrsproject\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{96578801-5C15-4050-89C2-B086A019CE1F}|kyrsproject.csproj|C:\\Users\\Professional\\Downloads\\Worka\\kyrsproject\\kyrsproject\\formadminactsel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96578801-5C15-4050-89C2-B086A019CE1F}|kyrsproject.csproj|solutionrelative:formadminactsel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96578801-5C15-4050-89C2-B086A019CE1F}|kyrsproject.csproj|C:\\Users\\Professional\\Downloads\\Worka\\kyrsproject\\kyrsproject\\formadminactsel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{96578801-5C15-4050-89C2-B086A019CE1F}|kyrsproject.csproj|solutionrelative:formadminactsel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96578801-5C15-4050-89C2-B086A019CE1F}|kyrsproject.csproj|c:\\users\\professional\\downloads\\worka\\kyrsproject\\kyrsproject\\formordermanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96578801-5C15-4050-89C2-B086A019CE1F}|kyrsproject.csproj|solutionrelative:formordermanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96578801-5C15-4050-89C2-B086A019CE1F}|kyrsproject.csproj|C:\\Users\\Professional\\Downloads\\Worka\\kyrsproject\\kyrsproject\\formordermanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{96578801-5C15-4050-89C2-B086A019CE1F}|kyrsproject.csproj|solutionrelative:formordermanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96578801-5C15-4050-89C2-B086A019CE1F}|kyrsproject.csproj|C:\\Users\\Professional\\Downloads\\Worka\\kyrsproject\\kyrsproject\\formorderbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96578801-5C15-4050-89C2-B086A019CE1F}|kyrsproject.csproj|solutionrelative:formorderbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96578801-5C15-4050-89C2-B086A019CE1F}|kyrsproject.csproj|C:\\Users\\Professional\\Downloads\\Worka\\kyrsproject\\kyrsproject\\formmanagereditgoods.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96578801-5C15-4050-89C2-B086A019CE1F}|kyrsproject.csproj|solutionrelative:formmanagereditgoods.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96578801-5C15-4050-89C2-B086A019CE1F}|kyrsproject.csproj|C:\\Users\\Professional\\Downloads\\Worka\\kyrsproject\\kyrsproject\\formmanageractsel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96578801-5C15-4050-89C2-B086A019CE1F}|kyrsproject.csproj|solutionrelative:formmanageractsel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96578801-5C15-4050-89C2-B086A019CE1F}|kyrsproject.csproj|C:\\Users\\Professional\\Downloads\\Worka\\kyrsproject\\kyrsproject\\formauthorization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96578801-5C15-4050-89C2-B086A019CE1F}|kyrsproject.csproj|solutionrelative:formauthorization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96578801-5C15-4050-89C2-B086A019CE1F}|kyrsproject.csproj|C:\\Users\\Professional\\Downloads\\Worka\\kyrsproject\\kyrsproject\\formadminuserbuild.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96578801-5C15-4050-89C2-B086A019CE1F}|kyrsproject.csproj|solutionrelative:formadminuserbuild.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96578801-5C15-4050-89C2-B086A019CE1F}|kyrsproject.csproj|C:\\Users\\Professional\\Downloads\\Worka\\kyrsproject\\kyrsproject\\formadmineditusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96578801-5C15-4050-89C2-B086A019CE1F}|kyrsproject.csproj|solutionrelative:formadmineditusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96578801-5C15-4050-89C2-B086A019CE1F}|kyrsproject.csproj|C:\\Users\\Professional\\Downloads\\Worka\\kyrsproject\\kyrsproject\\formorderbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{96578801-5C15-4050-89C2-B086A019CE1F}|kyrsproject.csproj|solutionrelative:formorderbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96578801-5C15-4050-89C2-B086A019CE1F}|kyrsproject.csproj|C:\\Users\\Professional\\Downloads\\Worka\\kyrsproject\\kyrsproject\\formadminuserbuild.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{96578801-5C15-4050-89C2-B086A019CE1F}|kyrsproject.csproj|solutionrelative:formadminuserbuild.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96578801-5C15-4050-89C2-B086A019CE1F}|kyrsproject.csproj|C:\\Users\\Professional\\Downloads\\Worka\\kyrsproject\\kyrsproject\\formadmineditusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{96578801-5C15-4050-89C2-B086A019CE1F}|kyrsproject.csproj|solutionrelative:formadmineditusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96578801-5C15-4050-89C2-B086A019CE1F}|kyrsproject.csproj|C:\\Users\\Professional\\Downloads\\Worka\\kyrsproject\\kyrsproject\\formmanagereditgoods.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{96578801-5C15-4050-89C2-B086A019CE1F}|kyrsproject.csproj|solutionrelative:formmanagereditgoods.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96578801-5C15-4050-89C2-B086A019CE1F}|kyrsproject.csproj|C:\\Users\\Professional\\Downloads\\Worka\\kyrsproject\\kyrsproject\\formmanageractsel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{96578801-5C15-4050-89C2-B086A019CE1F}|kyrsproject.csproj|solutionrelative:formmanageractsel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96578801-5C15-4050-89C2-B086A019CE1F}|kyrsproject.csproj|C:\\Users\\Professional\\Downloads\\Worka\\kyrsproject\\kyrsproject\\formauthorization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{96578801-5C15-4050-89C2-B086A019CE1F}|kyrsproject.csproj|solutionrelative:formauthorization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|kyrsproject||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\worka\\kyrsproject\\kyrsproject\\formmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\worka\\kyrsproject\\kyrsproject\\formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\worka\\kyrsproject\\kyrsproject\\formadminuserbuider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "formAdminEditUsers.cs",
+              "DocumentMoniker": "C:\\Users\\Professional\\Downloads\\Worka\\kyrsproject\\kyrsproject\\formAdminEditUsers.cs",
+              "RelativeDocumentMoniker": "formAdminEditUsers.cs",
+              "ToolTip": "C:\\Users\\Professional\\Downloads\\Worka\\kyrsproject\\kyrsproject\\formAdminEditUsers.cs",
+              "RelativeToolTip": "formAdminEditUsers.cs",
+              "ViewState": "AgIAAIIAAAAAAAAAAAAUwJQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T22:08:58.336Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "formOrderManagement.cs",
+              "DocumentMoniker": "C:\\Users\\Professional\\Downloads\\Worka\\kyrsproject\\kyrsproject\\formOrderManagement.cs",
+              "RelativeDocumentMoniker": "formOrderManagement.cs",
+              "ToolTip": "C:\\Users\\Professional\\Downloads\\Worka\\kyrsproject\\kyrsproject\\formOrderManagement.cs",
+              "RelativeToolTip": "formOrderManagement.cs",
+              "ViewState": "AgIAADcBAAAAAAAAAAAtwGEBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T07:58:53.898Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "formAdminActSel.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\Professional\\Downloads\\Worka\\kyrsproject\\kyrsproject\\formAdminActSel.cs",
+              "RelativeDocumentMoniker": "formAdminActSel.cs",
+              "ToolTip": "C:\\Users\\Professional\\Downloads\\Worka\\kyrsproject\\kyrsproject\\formAdminActSel.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "formAdminActSel.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T10:05:20.593Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "formAdminActSel.cs",
+              "DocumentMoniker": "C:\\Users\\Professional\\Downloads\\Worka\\kyrsproject\\kyrsproject\\formAdminActSel.cs",
+              "RelativeDocumentMoniker": "formAdminActSel.cs",
+              "ToolTip": "C:\\Users\\Professional\\Downloads\\Worka\\kyrsproject\\kyrsproject\\formAdminActSel.cs",
+              "RelativeToolTip": "formAdminActSel.cs",
+              "ViewState": "AgIAABwAAACAZmZmZuY3wC0AAAB9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T10:05:23.825Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "formAdminUserBuild.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\Professional\\Downloads\\Worka\\kyrsproject\\kyrsproject\\formAdminUserBuild.cs",
+              "RelativeDocumentMoniker": "formAdminUserBuild.cs",
+              "ToolTip": "D:\\worka\\kyrsproject\\kyrsproject\\formAdminUserBuild.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T16:07:16.543Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "formAdminUserBuild.cs",
+              "DocumentMoniker": "C:\\Users\\Professional\\Downloads\\Worka\\kyrsproject\\kyrsproject\\formAdminUserBuild.cs",
+              "RelativeDocumentMoniker": "formAdminUserBuild.cs",
+              "ToolTip": "C:\\Users\\Professional\\Downloads\\Worka\\kyrsproject\\kyrsproject\\formAdminUserBuild.cs",
+              "RelativeToolTip": "formAdminUserBuild.cs",
+              "ViewState": "AgIAAFAAAAAAAAAAAADwv2EAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T16:12:40.716Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "kyrsproject",
+              "DocumentMoniker": "C:\\Users\\Professional\\Downloads\\Worka\\kyrsproject\\kyrsproject\\kyrsproject.csproj",
+              "RelativeDocumentMoniker": "kyrsproject.csproj",
+              "ToolTip": "C:\\Users\\Professional\\Downloads\\Worka\\kyrsproject\\kyrsproject\\kyrsproject.csproj",
+              "RelativeToolTip": "kyrsproject.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-06-09T15:26:06.685Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "formOrderBuilder.cs",
+              "DocumentMoniker": "C:\\Users\\Professional\\Downloads\\Worka\\kyrsproject\\kyrsproject\\formOrderBuilder.cs",
+              "RelativeDocumentMoniker": "formOrderBuilder.cs",
+              "ToolTip": "C:\\Users\\Professional\\Downloads\\Worka\\kyrsproject\\kyrsproject\\formOrderBuilder.cs",
+              "RelativeToolTip": "formOrderBuilder.cs",
+              "ViewState": "AgIAAOkAAAAAAAAAAAAUwPsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T13:12:24.982Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "formOrderBuilder.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\Professional\\Downloads\\Worka\\kyrsproject\\kyrsproject\\formOrderBuilder.cs",
+              "RelativeDocumentMoniker": "formOrderBuilder.cs",
+              "ToolTip": "D:\\worka\\kyrsproject\\kyrsproject\\formOrderBuilder.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-18T17:13:04.953Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "formManagerEditGoods.cs",
+              "DocumentMoniker": "C:\\Users\\Professional\\Downloads\\Worka\\kyrsproject\\kyrsproject\\formManagerEditGoods.cs",
+              "RelativeDocumentMoniker": "formManagerEditGoods.cs",
+              "ToolTip": "C:\\Users\\Professional\\Downloads\\Worka\\kyrsproject\\kyrsproject\\formManagerEditGoods.cs",
+              "RelativeToolTip": "formManagerEditGoods.cs",
+              "ViewState": "AgIAACEBAAAAAAAAAAAuwCoBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T18:39:01.382Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "formAuthorization.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\Professional\\Downloads\\Worka\\kyrsproject\\kyrsproject\\formAuthorization.cs",
+              "RelativeDocumentMoniker": "formAuthorization.cs",
+              "ToolTip": "D:\\worka\\kyrsproject\\kyrsproject\\formAuthorization.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T03:14:47.551Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "formManagerActSel.cs",
+              "DocumentMoniker": "C:\\Users\\Professional\\Downloads\\Worka\\kyrsproject\\kyrsproject\\formManagerActSel.cs",
+              "RelativeDocumentMoniker": "formManagerActSel.cs",
+              "ToolTip": "C:\\Users\\Professional\\Downloads\\Worka\\kyrsproject\\kyrsproject\\formManagerActSel.cs",
+              "RelativeToolTip": "formManagerActSel.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAADIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T17:16:05.001Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "formManagerEditGoods.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\Professional\\Downloads\\Worka\\kyrsproject\\kyrsproject\\formManagerEditGoods.cs",
+              "RelativeDocumentMoniker": "formManagerEditGoods.cs",
+              "ToolTip": "D:\\worka\\kyrsproject\\kyrsproject\\formManagerEditGoods.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T18:21:59.356Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "formOrderManagement.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\Professional\\Downloads\\Worka\\kyrsproject\\kyrsproject\\formOrderManagement.cs",
+              "RelativeDocumentMoniker": "formOrderManagement.cs",
+              "ToolTip": "D:\\worka\\kyrsproject\\kyrsproject\\formOrderManagement.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-18T17:12:40.038Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "formAuthorization.cs",
+              "DocumentMoniker": "C:\\Users\\Professional\\Downloads\\Worka\\kyrsproject\\kyrsproject\\formAuthorization.cs",
+              "RelativeDocumentMoniker": "formAuthorization.cs",
+              "ToolTip": "C:\\Users\\Professional\\Downloads\\Worka\\kyrsproject\\kyrsproject\\formAuthorization.cs",
+              "RelativeToolTip": "formAuthorization.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAADwv2IAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T03:14:51.067Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "formAdminEditUsers.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\Professional\\Downloads\\Worka\\kyrsproject\\kyrsproject\\formAdminEditUsers.cs",
+              "RelativeDocumentMoniker": "formAdminEditUsers.cs",
+              "ToolTip": "D:\\worka\\kyrsproject\\kyrsproject\\formAdminEditUsers.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T21:27:18.306Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "formManagerActSel.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\Professional\\Downloads\\Worka\\kyrsproject\\kyrsproject\\formManagerActSel.cs",
+              "RelativeDocumentMoniker": "formManagerActSel.cs",
+              "ToolTip": "D:\\worka\\kyrsproject\\kyrsproject\\formManagerActSel.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T10:22:50.623Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "formAdminUserBuider.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "D:\\worka\\kyrsproject\\kyrsproject\\formAdminUserBuider.cs",
+              "ToolTip": "D:\\worka\\kyrsproject\\kyrsproject\\formAdminUserBuider.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T15:52:26.06Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "formManager.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "D:\\worka\\kyrsproject\\kyrsproject\\formManager.cs",
+              "ToolTip": "D:\\worka\\kyrsproject\\kyrsproject\\formManager.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-18T17:26:44.9Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "formAdmin.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "D:\\worka\\kyrsproject\\kyrsproject\\formAdmin.cs",
+              "ToolTip": "D:\\worka\\kyrsproject\\formAdmin.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-18T17:10:02.552Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
