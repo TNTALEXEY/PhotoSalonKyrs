@@ -19,19 +19,17 @@ namespace kyrsproject
 		{
 			InitializeComponent();
 		}
-		public string connString = "NoData";
-		public static void ColorizeStatusColumn(DataGridView daGV)//окрашивалка заказов по их статусу
+		public string connString = "NoData";//строку подключения должны видеть все методы 
+		public static void ColorizeStatusColumn(DataGridView daGV)//окрашивание заказов по их статусу
 		{
 
-			// Перебор всех строк
 			for (int i = 0; i < daGV.Rows.Count; i++)
 			{
 
-				var cell = daGV.Rows[i].Cells[5];
+				var cell = daGV.Rows[i].Cells[5];//подготовка состояния заказа к анализу
 				string cellValue = cell.Value?.ToString()?.Trim();
 
-				// Назначение цветов в зависимости от значения
-				switch (cellValue)
+				switch (cellValue)//Назначение цвета от статуса 
 				{
 					case "+":
 						// Завершён - зелёный цвет
@@ -60,14 +58,12 @@ namespace kyrsproject
 			}
 		}
 
-		public void setUI(string userRole)
+		public void setUI(string userRole)//определение отображаемых снизу панелей в зависимости от роли пользователя
 		{
-			// Сначала скрываем все панели
 			panlWorker.Visible = false;
 			panlAdmin.Visible = false;
 
-			// Показываем нужную панель в зависимости от роли
-			switch (userRole)
+			switch (userRole)//выбираем панель в зависимости от роли
 			{
 				case "Worker":
 					panlWorker.Visible = true;
@@ -78,7 +74,7 @@ namespace kyrsproject
 					break;
 
 				default:
-				//дефолт есть, т.к. может войти менеджер, но он может только смотреть
+				//дефолт есть, т.к. может войти менеджер, но он может только смотреть, т.е. без панелей
 					break;
 			}
 		}
@@ -88,7 +84,6 @@ namespace kyrsproject
 			NpgsqlConnection nc = new NpgsqlConnection(connString);
 			try
 			{
-				//Открываем соединение.
 				nc.Open();
 				var dataSource = NpgsqlDataSource.Create(connString);
 				var command = dataSource.CreateCommand("SELECT Privelege FROM Priveleges WHERE CURRENT_USER = Login;");
@@ -96,7 +91,7 @@ namespace kyrsproject
 				reader.Read();
 				string WhoAmI = reader.GetString(0);
 				reader.Close();
-				nc.Close();//более эта сессия не нужна
+				nc.Close();
 
 
 				switch (WhoAmI)//выбор по типу узера
@@ -109,38 +104,39 @@ namespace kyrsproject
 						return "Worker";
 					default:
 						this.Close();//смысла в форме без пользователя нет
-						return "Error";//до него не дойдёт, устраняю ругань компилятора
+						return "Error";//иначе жалуется компилятор
 				}
 			}
 			catch (Exception)
 			{
 				MessageBox.Show("Получение роли текущего пользователя не удалось", "Ошибка");
 				this.Close();//смысла в форме без пользователя нет
-				return "Error";//до него не дойдёт, устраняю ругань компилятора
+				return "Error";
 			}
 		}
 
 
-		private void formOrderManagement_Load(object sender, EventArgs e)
+		private void formOrderManagement_Load(object sender, EventArgs e)//загрузка этой формы
 		{
-			// Получаем тип родительской формы
+			// Получаем тип родительской формы (изначально он неизвестен)
 			Type ownerType = this.Owner.GetType();
 			FieldInfo connStringField = ownerType.GetField("connString");//забираем строку подключения
 			connString = connStringField.GetValue(this.Owner) as string;
-			setUI(getRole());//выбираем по логину кто вошёл
+			setUI(getRole());
 			UpdateTable();
 		}
 
 		private void formOrderManagement_FormClosing(object sender, FormClosingEventArgs e)
+		//возврат работника на авторизацию по закрытии формы
 		{
-			if (getRole() == "Worker")//если работник то надо вернуть его на авторизацию (у него нет своей панели выбора действий)
+			if (getRole() == "Worker")
 			{
 				formAuthorization FormAccess = this.Owner as formAuthorization;//нужно чтобы сделать форму авторизации видимой
 				FormAccess.Show();
 			}
 		}
 
-		public void UpdateTable()
+		public void UpdateTable()//обновление списка заказов 
 		{
 			NpgsqlConnection nc = new NpgsqlConnection(connString);
 			try
@@ -170,11 +166,11 @@ namespace kyrsproject
 			catch (Exception)
 			{
 				MessageBox.Show("Получение списка заказов не удалось", "Ошибка");
-				this.Close();//смысла в форме без товаров нет
+				this.Close();//смысла в форме без заказов нет
 			}
 		}
 
-		private void loadVars()
+		private void loadVars()//загрузка содержимого заказа
 		{
 			this.dagvOrderPartList.Columns.Clear();//очистка дагв
 			this.dagvOrderPartList.Rows.Clear();
@@ -206,11 +202,11 @@ namespace kyrsproject
 			}
 			catch (Exception)
 			{
-				MessageBox.Show("Загрузка вариантов товара не удалась", "Ошибка");
+				MessageBox.Show("Загрузка содержимого заказа не удалась", "Ошибка");
 			}
 		}
 
-		void moveToRowByID(DataGridView dagv, object value)
+		void moveToRowByID(DataGridView dagv, object value)//поиск и перемещение к строке по ИД
 		{
 			foreach (DataGridViewRow row in dagv.Rows)
 			{
@@ -224,12 +220,12 @@ namespace kyrsproject
 		}
 
 
-		private void dagvOrderList_SelectionChanged(object sender, EventArgs e)
+		private void dagvOrderList_SelectionChanged(object sender, EventArgs e)//при смене выбора заказа грузим его содержимое
 		{
 			loadVars();
 		}
 
-		private void butnOrderCancel_Click(object sender, EventArgs e)
+		private void butnOrderCancel_Click(object sender, EventArgs e)//отмена заказа 
 		{
 			if (this.dagvOrderList.CurrentCell != null)//проверка того что выбрано хоть что то
 			{
@@ -243,7 +239,7 @@ namespace kyrsproject
 						var dataSource = NpgsqlDataSource.Create(connString);
 						var command = dataSource.CreateCommand($"UPDATE Orders SET IsCompleted = 'X', " +
 							$"CompCancDate = CURRENT_DATE " +
-							$"WHERE OrderID = {this.dagvOrderList.CurrentRow.Cells[0].Value.ToString()};");//мегакоманда чтобы обновить товар по изменённой строке
+							$"WHERE OrderID = {this.dagvOrderList.CurrentRow.Cells[0].Value.ToString()};");
 						command.ExecuteNonQuery();
 						nc.Close();
 						UpdateTable();
@@ -253,7 +249,6 @@ namespace kyrsproject
 					{
 						UpdateTable();//при ошибке сбрасываем состояние таблицы, т.к. иначе реальная и грид не совпадут
 						MessageBox.Show("Отмена заказа не удалась", "Ошибка");
-						//Код обработки ошибок
 					}
 				}
 				else
@@ -263,7 +258,7 @@ namespace kyrsproject
 				return;
 		}
 
-		private void butnOrderComplete_Click(object sender, EventArgs e)
+		private void butnOrderComplete_Click(object sender, EventArgs e)//завершение заказа 
 		{
 			if (this.dagvOrderList.CurrentCell != null)//проверка того что выбрано хоть что то
 			{
@@ -277,7 +272,7 @@ namespace kyrsproject
 						var dataSource = NpgsqlDataSource.Create(connString);
 						var command = dataSource.CreateCommand($"UPDATE Orders SET IsCompleted = '+', " +
 							$"CompCancDate = CURRENT_DATE " +
-							$"WHERE OrderID = {this.dagvOrderList.CurrentRow.Cells[0].Value.ToString()};");//мегакоманда чтобы обновить товар по изменённой строке
+							$"WHERE OrderID = {this.dagvOrderList.CurrentRow.Cells[0].Value.ToString()};");
 						command.ExecuteNonQuery();
 						nc.Close();
 						UpdateTable();
@@ -296,40 +291,40 @@ namespace kyrsproject
 				return;
 		}
 
-		private void butnOrderAdd_Click(object sender, EventArgs e)
+		private void butnOrderAdd_Click(object sender, EventArgs e)//переход на форму создания заказа 
 		{
 			formOrderBuilder FOB = new formOrderBuilder();
 			FOB.Owner = this;//нужно для вызова обратно
 			FOB.ShowDialog();
 		}
 
-		private void removeRowsById(DataGridView dgv, int idToRemove)//удалялка строк по ид
+		private void removeRowsById(DataGridView dgv, int idToRemove)//поиск и удаление строк по ид
 		{
-			foreach (DataGridViewRow row in dgv.Rows)//ищет перебором нужную строку
+			foreach (DataGridViewRow row in dgv.Rows)
 			{
 				if (row.Cells[0].Value.ToString() == idToRemove.ToString())
 				{
-					dgv.Rows.Remove(row);//удаляет
+					dgv.Rows.Remove(row);
 					return;
 				}
 			}
 		}
 
-		private void butnOrderDelete_Click(object sender, EventArgs e)
+		private void butnOrderDelete_Click(object sender, EventArgs e)//удаление заказа 
 		{
 			DialogResult result = DialogResult.No;
 			if (this.dagvOrderList.CurrentCell != null)//проверка того что выбрано хоть что то
 			{
-				result = MessageBox.Show(
-				"Заказ будет удалён, вы уверены?", // Текст сообщения
-				"Предупреждение", // Заголовок окна
-				MessageBoxButtons.YesNo, // Тип кнопок (Да/Нет)
-				MessageBoxIcon.Warning, // Иконка предупреждения
+				result = MessageBox.Show(//Подтверждение удаления заказа 
+				"Заказ будет удалён, вы уверены?", 
+				"Предупреждение", 
+				MessageBoxButtons.YesNo, 
+				MessageBoxIcon.Warning, 
 				MessageBoxDefaultButton.Button2 // Кнопка по умолчанию (Нет)
 			);
 			}
 
-			if (result == DialogResult.Yes)
+			if (result == DialogResult.Yes)//если да -- выполнение, если нет -- ничего не происходит
 			{
 				NpgsqlConnection nc = new NpgsqlConnection(connString);
 				try
@@ -356,27 +351,25 @@ namespace kyrsproject
 		public void emptinessFiller(DataGridView dataGridView)//заменяет все пустые ячейки на пробелы (предотвращает кучу проблем в других методах)
 		{
 
-			// Перебираем все строки
 			foreach (DataGridViewRow row in dataGridView.Rows)
 			{
-				// Перебираем все ячейки в строке
 				foreach (DataGridViewCell cell in row.Cells)
 				{
-					// Проверяем различные варианты пустых значений
+					// Проверяем различные варианты пустых значений и заменяем на пробел
 					if (cell.Value == null ||
 						cell.Value == DBNull.Value ||
 						string.IsNullOrEmpty(cell.Value.ToString()) ||
 						string.IsNullOrWhiteSpace(cell.Value.ToString()))
 					{
-						cell.Value = " "; // Заменяем на пробел
+						cell.Value = " "; 
 					}
 				}
 			}
 		}
 
-		private void dagvOrderList_SortCompare(object sender, DataGridViewSortCompareEventArgs e)
+		private void dagvOrderList_SortCompare(object sender, DataGridViewSortCompareEventArgs e)//своя сортировка для столбцов с датой, где пустые значения
 		{
-			if (e.Column.Index == 6)
+			if (e.Column.Index == 6)//проверка что выбран именно столбец с датой
 			{
 				bool value1IsEmpty = e.CellValue1 == null || e.CellValue1 == DBNull.Value ||
 									string.IsNullOrEmpty(e.CellValue1?.ToString()) ||
@@ -388,7 +381,7 @@ namespace kyrsproject
 				if (value1IsEmpty && value2IsEmpty)
 				{
 					e.SortResult = 0;
-					e.Handled = true;
+					e.Handled = true;//отдаём контроль сортировки этому методу
 					return;
 				}
 
@@ -406,7 +399,7 @@ namespace kyrsproject
 					return;
 				}
 
-				// Получаем строковые значения и убираем пробелы по краям
+				// Получаем строковые значения 
 				string dateString1 = e.CellValue1?.ToString()?.Trim();
 				string dateString2 = e.CellValue2?.ToString()?.Trim();
 
@@ -436,21 +429,21 @@ namespace kyrsproject
 				bool date1Parsed = DateTime.TryParse(dateString1, out DateTime date1);
 				bool date2Parsed = DateTime.TryParse(dateString2, out DateTime date2);
 
-				if (date1Parsed && date2Parsed)
+				if (date1Parsed && date2Parsed)//сортировка по дате
 				{
 					e.SortResult = date1.CompareTo(date2);
 				}
 				else if (date1Parsed && !date2Parsed)
 				{
-					e.SortResult = -1; // Корректные даты выше некорректных
+					e.SortResult = -1; 
 				}
 				else if (!date1Parsed && date2Parsed)
 				{
-					e.SortResult = 1; // Некорректные даты ниже корректных
+					e.SortResult = 1; 
 				}
 				else
 				{
-					// Если обе даты некорректные, сравниваем как текст
+					// в особом случае (которого быть не должно) сравниваем даты как текст
 					e.SortResult = string.Compare(dateString1, dateString2);
 				}
 

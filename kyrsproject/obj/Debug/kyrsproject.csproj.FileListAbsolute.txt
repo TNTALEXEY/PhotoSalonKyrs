@@ -2,9 +2,6 @@ C:\Users\Professional\Downloads\Worka\kyrsproject\kyrsproject\obj\Debug\kyrsproj
 C:\Users\Professional\Downloads\Worka\kyrsproject\kyrsproject\obj\Debug\kyrsproject.Properties.Resources.resources
 C:\Users\Professional\Downloads\Worka\kyrsproject\kyrsproject\obj\Debug\kyrsproject.csproj.GenerateResource.cache
 C:\Users\Professional\Downloads\Worka\kyrsproject\kyrsproject\obj\Debug\kyrsproject.csproj.CoreCompileInputs.cache
-C:\Users\Professional\Downloads\Worka\kyrsproject\kyrsproject\bin\Debug\kyrsproject.exe.config
-C:\Users\Professional\Downloads\Worka\kyrsproject\kyrsproject\bin\Debug\kyrsproject.exe
-C:\Users\Professional\Downloads\Worka\kyrsproject\kyrsproject\bin\Debug\kyrsproject.pdb
 C:\Users\Professional\Downloads\Worka\kyrsproject\kyrsproject\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\Professional\Downloads\Worka\kyrsproject\kyrsproject\bin\Debug\Microsoft.Bcl.HashCode.dll
 C:\Users\Professional\Downloads\Worka\kyrsproject\kyrsproject\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
@@ -39,8 +36,6 @@ C:\Users\Professional\Downloads\Worka\kyrsproject\kyrsproject\bin\Debug\System.T
 C:\Users\Professional\Downloads\Worka\kyrsproject\kyrsproject\bin\Debug\System.ValueTuple.xml
 C:\Users\Professional\Downloads\Worka\kyrsproject\kyrsproject\obj\Debug\kyrsproject.formAuthorization.resources
 C:\Users\Professional\Downloads\Worka\kyrsproject\kyrsproject\obj\Debug\kyrsproj.D0C0AFAA.Up2Date
-C:\Users\Professional\Downloads\Worka\kyrsproject\kyrsproject\obj\Debug\kyrsproject.exe
-C:\Users\Professional\Downloads\Worka\kyrsproject\kyrsproject\obj\Debug\kyrsproject.pdb
 C:\Users\Professional\Downloads\Worka\kyrsproject\kyrsproject\obj\Debug\kyrsproject.formAdminActSel.resources
 C:\Users\Professional\Downloads\Worka\kyrsproject\kyrsproject\obj\Debug\kyrsproject.formManagerActSel.resources
 C:\Users\Professional\Downloads\Worka\kyrsproject\kyrsproject\obj\Debug\kyrsproject.formManagerEditGoods.resources
@@ -96,3 +91,10 @@ D:\worka\kyrsproject\kyrsproject\bin\Debug\PhotoSalonApp.exe
 D:\worka\kyrsproject\kyrsproject\bin\Debug\PhotoSalonApp.pdb
 D:\worka\kyrsproject\kyrsproject\obj\Debug\PhotoSalonApp.exe
 D:\worka\kyrsproject\kyrsproject\obj\Debug\PhotoSalonApp.pdb
+C:\Users\Professional\Downloads\Worka\kyrsproject\kyrsproject\bin\Debug\PhotoSalonApp.exe.config
+C:\Users\Professional\Downloads\Worka\kyrsproject\kyrsproject\bin\Debug\PhotoSalonApp.exe
+C:\Users\Professional\Downloads\Worka\kyrsproject\kyrsproject\bin\Debug\PhotoSalonApp.pdb
+C:\Users\Professional\Downloads\Worka\kyrsproject\kyrsproject\obj\Debug\kyrsproject.formAdminEditUsers.resources
+C:\Users\Professional\Downloads\Worka\kyrsproject\kyrsproject\obj\Debug\kyrsproject.formAdminUserBuild.resources
+C:\Users\Professional\Downloads\Worka\kyrsproject\kyrsproject\obj\Debug\PhotoSalonApp.exe
+C:\Users\Professional\Downloads\Worka\kyrsproject\kyrsproject\obj\Debug\PhotoSalonApp.pdb

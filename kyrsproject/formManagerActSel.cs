@@ -16,15 +16,15 @@ namespace kyrsproject
 		{
 			InitializeComponent();
 		}
-		public string connString = "NoData";
+		public string connString = "NoData";//строка должна быть видима всем методам
 
-		private void formManagerActSel_Load(object sender, EventArgs e)
+		private void formManagerActSel_Load(object sender, EventArgs e)//загрузка этой формы
 		{
 			formAuthorization FormAccess = this.Owner as formAuthorization;//нужно чтобы забрать строку подключения
 			connString = FormAccess.connString;
 		}
 
-		private void butnEditGoods_Click(object sender, EventArgs e)
+		private void butnEditGoods_Click(object sender, EventArgs e)//открытие формы редактирования товаров и услуг
 		{
 			//форма скрываться не будет ибо манагер имеет право в любой момент вызвать другие окна управления
 			formManagerEditGoods ManGE = new formManagerEditGoods();
@@ -32,7 +32,7 @@ namespace kyrsproject
 			ManGE.Show();
 		}
 
-		private void butnEditOrders_Click(object sender, EventArgs e)
+		private void butnEditOrders_Click(object sender, EventArgs e)//открытие формы просмотра заказов
 		{
 			//форма скрываться не будет ибо манагер имеет право в любой момент вызвать другие окна управления
 			formOrderManagement OrdM = new formOrderManagement();

@@ -54,7 +54,7 @@ namespace kyrsproject
 			}
 		}
 
-		private void removeRowsByLogin(DataGridView dgv, string loginToRemove)//удалялка строк по логину (он выполняет функцию ид)
+		private void removeRowsByLogin(DataGridView dgv, string loginToRemove)//удалялка строк по логину (логин здесь выполняет функцию ид)
 		{
 			foreach (DataGridViewRow row in dgv.Rows)//ищет перебором нужную строку
 			{
@@ -66,21 +66,21 @@ namespace kyrsproject
 			}
 		}
 
-		private void butnUserDelete_Click(object sender, EventArgs e)
+		private void butnUserDelete_Click(object sender, EventArgs e)//удаление пользователя
 		{
 			DialogResult result = DialogResult.No;
 			if (this.dagvUserList.CurrentCell != null)//проверка того что выбрано хоть что то
 			{
-				result = MessageBox.Show(
-				"Выбранный пользователь будет удалён, продолжить?", // Текст сообщения
-				"Предупреждение", // Заголовок окна
-				MessageBoxButtons.YesNo, // Тип кнопок (Да/Нет)
-				MessageBoxIcon.Warning, // Иконка предупреждения
+				result = MessageBox.Show(//Окно запроса подтверждения
+				"Выбранный пользователь будет удалён, продолжить?", 
+				"Предупреждение", 
+				MessageBoxButtons.YesNo, 
+				MessageBoxIcon.Warning, 
 				MessageBoxDefaultButton.Button2 // Кнопка по умолчанию (Нет)
 			);
 			}
 
-			if (result == DialogResult.Yes)
+			if (result == DialogResult.Yes)//в случае да выполняется всё, в случае нет ничего
 			{
 				NpgsqlConnection nc = new NpgsqlConnection(connString);
 				try
@@ -110,14 +110,14 @@ namespace kyrsproject
 			}
 		}
 
-		private void butnUserAdd_Click(object sender, EventArgs e)
+		private void butnUserAdd_Click(object sender, EventArgs e)//открытие формы добавления пользователей
 		{
 			formAdminUserBuild FAUB = new formAdminUserBuild();
 			FAUB.Owner = this;//нужно для вызова обратно
 			FAUB.ShowDialog();
 		}
 
-		private string getLoginFromConnString(string connectString)
+		private string getLoginFromConnString(string connectString)//извлекалка логина из строки подключения
 		{
 			var builder = new NpgsqlConnectionStringBuilder(connectString);
 

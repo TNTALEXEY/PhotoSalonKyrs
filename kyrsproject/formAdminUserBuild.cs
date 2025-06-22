@@ -17,10 +17,10 @@ namespace kyrsproject
 		{
 			InitializeComponent();
 		}
-		string connString = "NoData";
-		private void butnAdd_Click(object sender, EventArgs e)
+		string connString = "NoData";//строка подключения должна быть видима всем методам
+		private void butnAdd_Click(object sender, EventArgs e)//добавление пользователя
 		{
-			if (!string.IsNullOrWhiteSpace(tboxLogin.Text) && !string.IsNullOrWhiteSpace(tboxPassword.Text))
+			if (!string.IsNullOrWhiteSpace(tboxLogin.Text) && !string.IsNullOrWhiteSpace(tboxPassword.Text))//при пустом логине/пароле не добавляет с предупреждением
 			{
 				NpgsqlConnection nc = new NpgsqlConnection(connString);
 				try
@@ -28,7 +28,7 @@ namespace kyrsproject
 					nc.Open();
 					var dataSource = NpgsqlDataSource.Create(connString);
 					var command = dataSource.CreateCommand("");
-					switch (combRole.Text)
+					switch (combRole.Text)//различные запросы для создания пользователей разных ролей
 					{
 						case "Worker":
 							command = dataSource.CreateCommand($"CREATE USER \"{tboxLogin.Text}\" WITH PASSWORD '{tboxPassword.Text}'; " +
@@ -70,8 +70,8 @@ namespace kyrsproject
 							command.ExecuteNonQuery();
 							break;
 					}
-					nc.Close();    //соединение более не нужно, закрываю
-					formAdminEditUsers FormAccess = this.Owner as formAdminEditUsers;//забираем текущую строку подключения
+					nc.Close();    
+					formAdminEditUsers FormAccess = this.Owner as formAdminEditUsers;//вызываем в родительской форме обновление списка пользователей
 					FormAccess.loadUserList();
 					this.Close();//после успешного сохранения закрываем форму
 				}
@@ -87,9 +87,9 @@ namespace kyrsproject
 			}
 		}
 
-		private void formAdminUserBuild_Load(object sender, EventArgs e)
+		private void formAdminUserBuild_Load(object sender, EventArgs e)//загрузка этой формы
 		{
-			combRole.SelectedIndex = 0;//ставим значение по умолчанию
+			combRole.SelectedIndex = 0;//ставим значение по умолчанию в выпадающем списке
 			formAdminEditUsers FormAccess = this.Owner as formAdminEditUsers;//нужно чтобы забрать строку подключения
 			connString = FormAccess.connString;
 		}

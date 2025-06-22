@@ -18,20 +18,20 @@ namespace kyrsproject
 		{
 			InitializeComponent();
 		}
-		string connString = "NoData";
-		private void removeRowsById(DataGridView dgv, int idToRemove)//удалялка строк по ид
+		string connString = "NoData";//строка подключения должна быть видима всем методам
+		private void removeRowsById(DataGridView dgv, int idToRemove)//поиск и удаление строк по ИД
 		{
-			foreach (DataGridViewRow row in dgv.Rows)//ищет перебором нужную строку
+			foreach (DataGridViewRow row in dgv.Rows)
 			{
 				if (row.Cells[0].Value.ToString() == idToRemove.ToString())
 				{
-					dgv.Rows.Remove(row);//удаляет
+					dgv.Rows.Remove(row);
 					return;
 				}
 			}
 		}
-		int IDcounter = 1;//счётчик чтобы ид в OrderBuild управлять
-		private void OrderBuildInit()//создаёт табличку для построения заказов
+		int IDcounter = 1;//счётчик чтобы имитировать SERIAL во временной таблице (dagvOrderBuild)
+		private void OrderBuildInit()//формирует таблицу состав заказа 
 		{
 			dagvOrderBuild.Columns.Add("ID", "ID");
 			dagvOrderBuild.Columns.Add("GoodsID", "GoodsID");
@@ -40,11 +40,11 @@ namespace kyrsproject
 			dagvOrderBuild.Columns.Add("VariantName", "Вариант");
 			dagvOrderBuild.Columns.Add("Quantity", "Количество");
 			dagvOrderBuild.Columns.Add("PositionPrice", "Сумма за позицию");
-			this.dagvOrderBuild.Columns[0].Visible = false;//прячу ненужный в отображении столбец
-			this.dagvOrderBuild.Columns[1].Visible = false;//прячу ненужный в отображении столбец
-			this.dagvOrderBuild.Columns[2].Visible = false;//прячу ненужный в отображении столбец
+			this.dagvOrderBuild.Columns[0].Visible = false;//прячу ненужные в отображении столбцы
+			this.dagvOrderBuild.Columns[1].Visible = false;//
+			this.dagvOrderBuild.Columns[2].Visible = false;//
 		}
-		private void UpdateTableGoods()
+		private void UpdateTableGoods()//обновление таблицы товаров 
 		{
 			NpgsqlConnection nc = new NpgsqlConnection(connString);
 			try
@@ -74,9 +74,9 @@ namespace kyrsproject
 				this.Close();//смысла в форме без товаров нет
 			}
 		}
-		private void formOrderBuilder_Load(object sender, EventArgs e)
+		private void formOrderBuilder_Load(object sender, EventArgs e)//загрузка этой формы
 		{
-			// Получаем тип родительской формы
+			// Получаем тип родительской формы (изначально он неизвестен)
 			Type ownerType = this.Owner.GetType();
 			FieldInfo connStringField = ownerType.GetField("connString");//забираем строку подключения
 			connString = connStringField.GetValue(this.Owner) as string;
@@ -84,14 +84,14 @@ namespace kyrsproject
 			OrderBuildInit();
 		}
 
-		public void KeyBannerInt(object sender, KeyPressEventArgs e)//блокировалка не цифр (2 аргумента чтоб его мог использовать текстбох как метод)
+		public void KeyBannerInt(object sender, KeyPressEventArgs e)//блокировалка не цифр (2 аргумента чтоб его мог использовать текстбох как событие)
 		{
-			if (!Char.IsDigit(e.KeyChar) && e.KeyChar != 8 && e.KeyChar != 127)//проверка на цифру или удалялку
+			if (!Char.IsDigit(e.KeyChar) && e.KeyChar != 8 && e.KeyChar != 127)//проверка на цифры или удаляющие символы
 			{
-				e.Handled = true;//блокируем ввод
+				e.Handled = true;
 			}
 		}
-		private void loadVars()
+		private void loadVars()//загрузка вариантов товаров 
 		{
 			this.dagvGoodsVars.Columns.Clear();//очистка дагв
 			this.dagvGoodsVars.Rows.Clear();
@@ -127,14 +127,14 @@ namespace kyrsproject
 			}
 		}
 
-		private void dagvGoodsList_SelectionChanged(object sender, EventArgs e)
+		private void dagvGoodsList_SelectionChanged(object sender, EventArgs e)//загрузка вариатнов выбранного товара
 		{
 			loadVars();
 		}
 
-		private void butnAddToOrder_Click(object sender, EventArgs e)
+		private void butnAddToOrder_Click(object sender, EventArgs e)//добавление товара в состав заказа 
 		{
-			if(this.dagvGoodsList.CurrentCell != null || this.dagvGoodsList.CurrentCell != null)
+			if(this.dagvGoodsList.CurrentCell != null || this.dagvGoodsVars.CurrentCell != null)
 			{
 				if (tboxAmount.Text == "" || tboxAmount.Text[0] == '0')
 				{
@@ -142,7 +142,7 @@ namespace kyrsproject
 				}
 				else
 				{
-					// Получение данных
+					// Заполнение в строку данных из других датагрибов
 					string Id = Convert.ToString(IDcounter++);
 					string goodsId = this.dagvGoodsList.CurrentRow.Cells[0].Value.ToString();
 					string variantId = this.dagvGoodsVars.CurrentRow.Cells[0].Value.ToString();
@@ -150,8 +150,6 @@ namespace kyrsproject
 					string variantName = this.dagvGoodsVars.CurrentRow.Cells[2].Value.ToString();
 					string quantity = tboxAmount.Text;
 					string price = (Convert.ToInt32(tboxAmount.Text) * float.Parse(this.dagvGoodsVars.CurrentRow.Cells[3].Value.ToString())).ToString();
-
-					// Добавление строки
 					dagvOrderBuild.Rows.Add(Id, goodsId, variantId, goodsName, variantName, quantity, price);
 				}
 			}
@@ -162,7 +160,7 @@ namespace kyrsproject
 			}
 		}
 
-		private void butnDelOrderBuild_Click(object sender, EventArgs e)
+		private void butnDelOrderBuild_Click(object sender, EventArgs e)//удаление товара из заказа
 		{
 			if (this.dagvOrderBuild.CurrentCell != null)//проверка того что выбрано хоть что то
 				removeRowsById(dagvOrderBuild, Convert.ToInt32(this.dagvOrderBuild.CurrentRow.Cells[0].Value.ToString()));
@@ -170,11 +168,10 @@ namespace kyrsproject
 				return;
 		}
 
-		public string calcPrice()
+		public string calcPrice()// Подсчёт общей суммы заказа 
 		{
 			decimal totalSum = 0;
 
-			// Перебираем все строки
 			foreach (DataGridViewRow row in dagvOrderBuild.Rows)
 			{
 				var cellValue = row.Cells["PositionPrice"].Value;
@@ -195,7 +192,7 @@ namespace kyrsproject
 			return totalSum.ToString("F2");
 		}
 
-		private void butnSave_Click(object sender, EventArgs e)
+		private void butnSave_Click(object sender, EventArgs e)// Процедура сохранения заказа 
 		{
 			if(!string.IsNullOrWhiteSpace(tboxFam.Text) && !string.IsNullOrWhiteSpace(tboxFam.Text))
 			{
@@ -205,29 +202,28 @@ namespace kyrsproject
 					try
 					{
 						string pricestorage = "NoData";
-						UpdateTableGoods();//одновляем таблицу, чтобы викинуть пользователя из редактирования (иначе оно ломает весь процесс)
+						UpdateTableGoods();//обновляем таблицу, чтобы выкинуть пользователя из редактирования (иначе оно ломает весь процесс)
 						nc.Open();
 						var dataSource = NpgsqlDataSource.Create(connString);
 						pricestorage = calcPrice();
-						pricestorage = pricestorage.Replace(',', '.');//замена запятых на точки, чтобы запрос не ругался
+						pricestorage = pricestorage.Replace(',', '.');//замена запятых на точки, чтобы запрос не ломался
 						var command = dataSource.CreateCommand($"INSERT INTO Orders (CustomerFirstName, CustomerLastName, CustomerSurName, CreationDate, IsCompleted, TotalPrice) VALUES " +
-							$"('{tboxFam.Text}', '{tboxNam.Text}', '{tboxOtc.Text}', CURRENT_DATE, '0', {pricestorage});");//создаём товар
+							$"('{tboxFam.Text}', '{tboxNam.Text}', '{tboxOtc.Text}', CURRENT_DATE, '0', {pricestorage});");//создаём заказ 
 						command.ExecuteNonQuery();
 						command = dataSource.CreateCommand($"SELECT last_value FROM public.orders_orderid_seq;");//забираем его номер для перехода потом
 						var reader = command.ExecuteReader();
 						reader.Read();
 						Int64 lastvalue = reader.GetInt64(0);
 						reader.Close();
-						// Перебираем все строки
-						foreach (DataGridViewRow row in dagvOrderBuild.Rows)
+						foreach (DataGridViewRow row in dagvOrderBuild.Rows)//копировалка содержимого dagvOrderBuild в таблицу заказа 
 						{
 							pricestorage = row.Cells[6].Value.ToString();
-							pricestorage = pricestorage.Replace(',', '.');//замена запятых на точки, чтобы запрос не ругался
+							pricestorage = pricestorage.Replace(',', '.');
 							command = dataSource.CreateCommand($"INSERT INTO OrderParts (OrderID, GoodsID, VariantID, Quantity, PositionPrice) VALUES " +
-							$"({lastvalue}, {row.Cells[1].Value.ToString()}, {row.Cells[2].Value.ToString()}, {row.Cells[5].Value.ToString()}, {pricestorage});");//создаём товар
+							$"({lastvalue}, {row.Cells[1].Value.ToString()}, {row.Cells[2].Value.ToString()}, {row.Cells[5].Value.ToString()}, {pricestorage});");//добавляем товар в состав заказа 
 							command.ExecuteNonQuery();
 						}
-						nc.Close();    //соединение более не нужно, закрываю
+						nc.Close();   
 						formOrderManagement FormAccess = this.Owner as formOrderManagement;//забираем текущую строку подключения
 						FormAccess.UpdateTable();
 						this.Close();//после успешного сохранения закрываем форму
@@ -252,20 +248,17 @@ namespace kyrsproject
 
 		public void emptinessFiller(DataGridView dataGridView)//заменяет все пустые ячейки на пробелы (предотвращает кучу проблем в других методах)
 		{
-
-			// Перебираем все строки
 			foreach (DataGridViewRow row in dataGridView.Rows)
 			{
-				// Перебираем все ячейки в строке
 				foreach (DataGridViewCell cell in row.Cells)
 				{
-					// Проверяем различные варианты пустых значений
+					// Проверяем различные варианты пустых значений и заменяем на пробел 
 					if (cell.Value == null ||
 						cell.Value == DBNull.Value ||
 						string.IsNullOrEmpty(cell.Value.ToString()) ||
 						string.IsNullOrWhiteSpace(cell.Value.ToString()))
 					{
-						cell.Value = " "; // Заменяем на пробел
+						cell.Value = " "; 
 					}
 				}
 			}
